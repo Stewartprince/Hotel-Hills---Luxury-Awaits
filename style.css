@@ -1,0 +1,574 @@
+body {
+    font-family: 'Arima', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.logo img {
+    width: 75px; /* Reduced logo size */
+    height: 75px; /* Set height */
+    margin-top: 19px;
+    border-radius: 50%; /* Make it fully rounded */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block; /* Ensures there's no extra space below the image */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; /* Font size for menu items */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.cta {
+    background-color: #f39c12; /* Call to action button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.cta:hover {
+    background-color: #e67e22; /* Darker shade on hover */
+}
+
+.about, .rooms, .dining, .amenities, .gallery, .offers, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.room-list, .dining-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.room-item, .dining-item {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.logo {
+    margin-bottom: 20px; /* Space between logo and heading */
+}
+
+.logo img {
+    max-width: 200px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.gallery h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.gallery-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between images */
+}
+
+.gallery-carousel img {
+    width: 100%; /* Make images responsive */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery-carousel img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.contact h2 {
+    font-size: 36px; /* Large heading */
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.contact form {
+    max-width: 600px; /* Maximum width for the form */
+    margin: 0 auto; /* Center the form */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px; /* Space between form elements */
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px; /* Inner spacing for inputs */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.contact button {
+    padding: 15px; /* Inner spacing for button */
+    background-color: #e67e22; /* Button color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.contact button:hover {
+    background-color: #e67e22; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 28px; /* Smaller heading on smaller screens */
+    }
+
+    .contact input,
+    .contact textarea {
+        font-size: 14px; /* Smaller font size for inputs */
+    }
+
+    .contact button {
+        font-size: 14px; /* Smaller font size for button */
+    }
+}
+
+.offers {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.offers h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.offers p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.offer-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Space between cards */
+}
+
+.offer-card {
+    background: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    width: 300px; /* Fixed width for cards */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.offer-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e67e22; /* Accent color */
+}
+
+.offer-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.offer-card .cta {
+    background-color: #e67e22; /* Button color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.offer-card .cta:hover {
+    background-color: #e67e22; /* Darker shade on hover */
+}
+
+.offer-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.amenities {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.amenities h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.amenities p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+}
+
+.amenity-card {
+    background: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    transition: transform 0.3s; /* Smooth hover effect */
+    text-align: left; /* Align text to the left */
+}
+
+.amenity-image {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match card corners */
+    margin-bottom: 15px; /* Space below image */
+}
+
+.amenity-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e67e22; /* Accent color */
+}
+
+.amenity-card p {
+    font-size: 16px;
+    color: #444;
+}
+
+.amenity-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Dining Section Styles */
+.dining {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff; /* Light background for the section */
+}
+
+.dining h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333; /* Dark color for heading */
+}
+
+.dining p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666; /* Gray color for paragraph text */
+}
+
+.dining-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Responsive grid layout */
+    gap: 30px; /* Space between dining items */
+    margin-left: 90px;
+}
+
+.dining-item {
+    background: #f9f9f9; /* Light background for items */
+    width: 330px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for depth */
+    padding: 30px; /* Increased padding */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    text-align: center; /* Align text to the left */
+}
+
+.dining-image {
+    width: 300px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match item corners */
+    margin-bottom: 15px; /* Space below image */
+    display: block; /* Ensures proper layout */
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+}
+
+.dining-item h3 {
+    font-size: 26px; /* Increased heading size */
+    margin-bottom: 10px;
+    color: #e67e22; /* Accent color for headings */
+}
+
+.dining-item p {
+    font-size: 18px; /* Increased paragraph size */
+    color: #444; /* Darker gray for paragraph text */
+}
+
+.dining-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Rooms Section Styles */
+.rooms {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff; /* Light background for the section */
+}
+
+.rooms h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333; /* Dark color for heading */
+}
+
+.rooms p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666; /* Gray color for paragraph text */
+}
+
+.room-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Responsive grid layout */
+    gap: 30px;
+    margin-left: 90px;
+}
+
+.room-item {
+    background: #f9f9f9; /* Light background for items */
+    border-radius: 10px; /* Rounded corners */
+    width: 330px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding for content */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.room-image {
+    width: 300px; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match item corners */
+    margin-bottom: 15px; /* Space below image */
+}
+
+.room-item h3 {
+    font-size: 24px; /* Heading size for room types */
+    margin-bottom: 10px;
+    color: #e67e22; /* Accent color for headings */
+}
+
+.room-item p {
+    font-size: 16px; /* Size for room descriptions */
+    color: #444; /* Darker gray for paragraph text */
+}
+
+.room-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* About Section Styles */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f8f8; /* Light gray background for contrast */
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333; /* Dark color for heading */
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666; /* Gray color for paragraph text */
+    max-width: 800px; /* Limit width for readability */
+    margin-left: auto;
+    margin-right: auto; /* Center text */
+}
+
+.about-icons {
+    display: flex;
+    justify-content: center; /* Center icons */
+    gap: 40px; /* Space between icons */
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+}
+
+.icon {
+    text-align: center; /* Center text under icons */
+    flex: 1 1 200px; /* Responsive flex items with a base size */
+}
+
+.icon-image {
+    width: 100px; /* Set fixed width for icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+.icon p {
+    font-size: 16px; /* Size for icon descriptions */
+    color: #444; /* Darker gray for text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .about h2 {
+        font-size: 30px; /* Adjust heading size for smaller screens */
+    }
+
+    .about p {
+        font-size: 16px; /* Smaller font size for paragraphs */
+    }
+
+    .about-icons {
+        gap: 20px; /* Reduced gap on smaller screens */
+    }
+
+    .icon-image {
+        width: 60px; /* Smaller icon size */
+    }
+
+    .icon p {
+        font-size: 14px; /* Smaller text for icon descriptions */
+    }
+}
+
+@media (max-width: 480px) {
+    .about h2 {
+        font-size: 28px; /* Further adjust heading size */
+    }
+
+    .about p {
+        font-size: 14px; /* Further reduce paragraph size */
+    }
+
+    .icon {
+        flex: 1 1 150px; /* Adjust flex basis for very small screens */
+    }
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-image: url('hero-backgroung-image.jpg'); /* Replace with your background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent overflow for 3D effects */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1; /* Position above background but below content */
+}
+
+.hero-content {
+    position: relative; /* Position for text layering */
+    z-index: 2; /* Ensure content is above overlay */
+    text-align: center; /* Center text */
+    color: #fff; /* White text color */
+    transform: translateZ(0); /* Initialize for 3D effect */
+    animation: fadeIn 1.5s ease-in; /* Fade-in animation for the content */
+}
+
+.hero h1 {
+    font-size: 48px; /* Large heading */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+    transform: translateY(0); /* Start position for animation */
+    animation: slideIn 1s forwards; /* Slide-in animation */
+}
+
+.cta {
+    display: inline-block;
+    padding: 15px 30px; /* Button padding */
+    background-color: grey; /* Button color */
+    color: #fff; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.cta:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
